@@ -1,0 +1,16 @@
+{
+    "debug.onTaskErrors": "abort",
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/aad.*.json"
+            ],
+            "schema": {}
+        }
+    ],
+    "terminal.integrated.env.osx": {
+        "PATH": "/Users/mihkel.hobemagi/.nvm/versions/node/v24.11.0/bin:${env:PATH}",
+        "NVM_DIR": "/Users/mihkel.hobemagi/.nvm"
+    },
+    "nodejs.path": "/Users/mihkel.hobemagi/.nvm/versions/node/v24.11.0/bin/node"
+}

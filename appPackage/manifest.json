@@ -2,7 +2,7 @@
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.23/MicrosoftTeams.schema.json",
     "manifestVersion": "1.23",
     "version": "1.0.0",
-    "id": "${{TEAMS_APP_ID}}",
+    "id": "7d063cb1-fcd5-4ea2-b536-ff0603284194",
     "developer": {
         "name": "My App, Inc.",
         "websiteUrl": "https://www.example.com",
@@ -14,8 +14,8 @@
         "outline": "outline.png"
     },
     "name": {
-        "short": "burrito-bot${{APP_NAME_SUFFIX}}",
-        "full": "full name for burrito-bot"
+        "short": "Burrito Bot",
+        "full": "Burrito Bot - Team Recognition"
     },
     "description": {
         "short": "short description for burrito-bot",
@@ -24,7 +24,7 @@
     "accentColor": "#FFFFFF",
     "bots": [
         {
-            "botId": "${{BOT_ID}}",
+            "botId": "7d063cb1-fcd5-4ea2-b536-ff0603284194",
             "scopes": [
                 "team",
                 "groupChat",
@@ -35,16 +35,26 @@
             "commandLists": [
                 {
                     "scopes": [
-                        "personal"
+                        "personal",
+                        "team",
+                        "groupChat"
                     ],
                     "commands": [
                         {
-                            "title": "How can you help me?",
-                            "description": "How can you help me?"
+                            "title": "Give someone a burrito",
+                            "description": "Award a burrito: 'give @username a burrito' or 'give John a burrito'"
                         },
                         {
-                            "title": "How to develop agent for Teams?",
-                            "description": "How can I develop agents with Microsoft 365 Agents Toolkit?"
+                            "title": "Show leaderboard",
+                            "description": "/admin leaderboard - Show top burrito recipients"
+                        },
+                        {
+                            "title": "Show debug info",
+                            "description": "/debug - Show your user info and chat details"
+                        },
+                        {
+                            "title": "Become admin",
+                            "description": "/makeadmin - Make yourself an admin"
                         }
                     ]
                 }
@@ -83,4 +93,3 @@
     },
     "validDomains": []
 }
- 

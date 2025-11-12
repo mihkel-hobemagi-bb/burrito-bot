@@ -17,3 +17,70 @@
         "short": "burrito-bot${{APP_NAME_SUFFIX}}",
         "full": "full name for burrito-bot"
     },
+    "description": {
+        "short": "short description for burrito-bot",
+        "full": "full description for burrito-bot"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "${{BOT_ID}}",
+            "scopes": [
+                "team",
+                "groupChat",
+                "personal"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal"
+                    ],
+                    "commands": [
+                        {
+                            "title": "How can you help me?",
+                            "description": "How can you help me?"
+                        },
+                        {
+                            "title": "How to develop agent for Teams?",
+                            "description": "How can I develop agents with Microsoft 365 Agents Toolkit?"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [
+        {
+            "scopes": ["team"],
+            "canUpdateConfiguration": true
+        }
+    ],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "ChannelMessage.Read.Group",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "TeamSettings.Read.Group",
+                    "type": "Delegated"
+                }
+            ]
+        }
+    },
+    "webApplicationInfo": {
+        "id": "${{AZURE_AD_APP_ID}}",
+        "resource": "https://api.botframework.com"
+    },
+    "validDomains": []
+}
+ 

@@ -62,11 +62,35 @@
         }
     ],
     "composeExtensions": [],
-    "configurableTabs": [],
+    "configurableTabs": [
+        {
+            "scopes": ["team"],
+            "canUpdateConfiguration": true
+        }
+    ],
     "staticTabs": [],
     "permissions": [
         "identity",
         "messageTeamMembers"
     ],
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "ChannelMessage.Read.Group",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "TeamSettings.Read.Group",
+                    "type": "Delegated"
+                }
+            ]
+        }
+    },
+    "webApplicationInfo": {
+        "id": "${{AZURE_AD_APP_ID}}",
+        "resource": "https://api.botframework.com"
+    },
     "validDomains": []
 }
+ 

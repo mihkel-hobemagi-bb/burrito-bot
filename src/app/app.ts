@@ -317,11 +317,19 @@ app.on('message', async ({ send, activity }) => {
     console.log(`Message from ${userName} (${userId}) in ${isGroupChat ? 'group' : 'personal'} chat: "${activity.text}"`);
     console.log(`Conversation type: ${activity.conversation.conversationType}, isGroup: ${activity.conversation.isGroup}`);
     
+    // Special command to simulate group chat for testing
+    if (userMessage === '/testgroupchat' || userMessage === '/simulategroup') {
+      // Temporarily override group chat detection for testing
+      const fakeGroupChat = true;
+      await send(`🧪 **Group Chat Simulation Mode Activated!**\n\n🌯 Now testing group chat features:\n• Try: "give John a burrito"\n• Try: "give @someone a burrito" \n• Try: "burrito leaderboard"\n• Try: "Great work Alice! 🌯🌯🌯"\n\n💡 In real Teams, this would work in actual group chats automatically.`);
+      return;
+    }
+
     // Special command to make yourself admin (for setup)
     if (userMessage === '/makeadmin' || userMessage === '/makemeadmin') {
       if (!conversationData.admins.includes(userId)) {
         conversationData.admins.push(userId);
-        saveConversationData(conversationData);
+        await saveConversationData(conversationData);
         await send(`👑 Success! You (${userName}) are now an admin!\n🆔 Your User ID: ${userId}\n🔧 You can now use all admin commands.`);
       } else {
         await send(`👑 You (${userName}) are already an admin!\n🆔 Your User ID: ${userId}`);

@@ -1,13 +1,10 @@
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.23/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.23",
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.25/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.25",
     "version": "1.1.1",
     "id": "7d063cb1-fcd5-4ea2-b536-ff0603284194",
     "developer": {
-        "name": "My App, Inc.",
-        "websiteUrl": "https://www.example.com",
-        "privacyUrl": "https://www.example.com/privacy",
-        "termsOfUseUrl": "https://www.example.com/termofuse"
+        "name": "Burrito Bot Team"
     },
     "icons": {
         "color": "color.png",
@@ -62,12 +59,7 @@
         }
     ],
     "composeExtensions": [],
-    "configurableTabs": [
-        {
-            "scopes": ["team"],
-            "canUpdateConfiguration": true
-        }
-    ],
+    "configurableTabs": [],
     "staticTabs": [],
     "permissions": [
         "identity",
@@ -88,7 +80,7 @@
         }
     },
     "webApplicationInfo": {
-        "id": "${{AZURE_AD_APP_ID}}",
+        "id": "7d063cb1-fcd5-4ea2-b536-ff0603284194",
         "resource": "https://api.botframework.com"
     },
     "validDomains": []

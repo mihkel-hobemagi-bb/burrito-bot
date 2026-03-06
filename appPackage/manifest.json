@@ -2,9 +2,13 @@
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.25/MicrosoftTeams.schema.json",
     "manifestVersion": "1.25",
     "version": "1.1.1",
+    "productId": "00000000-0000-0000-0000-000000000000",
     "id": "7d063cb1-fcd5-4ea2-b536-ff0603284194",
     "developer": {
-        "name": "Burrito Bot Team"
+        "name": "Burrito Bot Team",
+        "websiteUrl": "https://example.com",
+        "privacyUrl": "https://example.com/privacy",
+        "termsOfUseUrl": "https://example.com/terms"
     },
     "icons": {
         "color": "color.png",
